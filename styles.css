@@ -1,0 +1,45 @@
+body, html {  
+    height: 100%;  
+    margin: 0;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    background-image: url('background.jpg'); /* Replace with your image file path or GitHub raw link */  
+    background-size: cover; /* Maintain aspect ratio while covering the area */  
+    background-position: center top; /* Adjust positioning to focus on the top section */  
+    font-family: 'Arial', sans-serif; /* Updated font for a modern feel */  
+}  
+
+.overlay {  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    height: 100%;  
+    width: 100%;  
+    background-color: rgba(2, 6, 35, 0.5); /* Semi-transparent overlay for better legibility */  
+    z-index: 1; /* Layer the overlay below the text */  
+}  
+
+.loading-container {  
+    text-align: center;  
+    color: white; /* Set text color to white for better contrast */  
+    background: #020623; /* Background color for loading container */  
+    padding: 30px; /* Add padding for a nicer look */  
+    border-radius: 10px; /* Slightly rounded corners */  
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */  
+    z-index: 2; /* Ensure loading container is above the overlay */  
+    position: relative; /* Positioning relative for z-index */  
+}  
+
+.loader {  
+    display: none; /* Hide the loader since we are using countdown */  
+}  
+
+h1 {  
+    font-size: 1.5rem; /* Adjust font size for better readability */  
+    margin: 0; /* Remove default margin */  
+}  
+
+p {  
+    margin: 0.5rem 0; /* Add some margin between paragraphs */  
+}
