@@ -31,15 +31,22 @@ body, html {
     position: relative; /* Positioning relative for z-index */  
 }  
 
-.loader {  
-    display: none; /* Hide the loader since we are using countdown */  
-}  
-
 h1 {  
-    font-size: 1.5rem; /* Adjust font size for better readability */  
+    font-size: 2rem; /* Increase font size for the main heading */  
     margin: 0; /* Remove default margin */  
 }  
 
-p {  
-    margin: 0.5rem 0; /* Add some margin between paragraphs */  
+#loading-text {  
+    font-size: 1.2rem; /* Increase font size for loading text */  
+    margin: 0.5rem 0; /* Add some margin */  
+    transition: font-size 0.5s ease; /* Smooth transition for font size changes */  
+}  
+
+#percentage {  
+    font-size: 1.5rem; /* Increase font size for percentage display */  
+    margin-top: 1rem; /* Add space above the percentage text */  
+}  
+
+.loader {  
+    display: none; /* Hide the loader since we are using countdown */  
 }
