@@ -1,72 +1,80 @@
+/* Reset defaults for body and html */  
 body, html {  
     height: 100%;  
     margin: 0;  
-    display: flex;  
-    justify-content: center;  
+    display: flex; /* Center content vertically and horizontally */  
+    justify-content: center;   
     align-items: center;  
-    background-image: url('background.jpg'); /* Replace with your image path */  
-    background-size: cover; /* Maintain aspect ratio while covering */  
-    background-position: center top; /* Focus on top section */  
-    font-family: 'Arial', sans-serif; /* Modern font style */  
+    background-image: url('background.jpg'); /* Replace with your background image path */  
+    background-size: cover;   
+    background-position: center top;   
+    font-family: 'Arial', sans-serif;   
 }  
 
+/* Overlay for a semi-transparent background */  
 .overlay {  
     position: absolute;  
     top: 0;  
     left: 0;  
     height: 100%;  
     width: 100%;  
-    background-color: rgba(2, 6, 35, 0.5); /* Semi-transparent overlay for better legibility */  
-    z-index: 1; /* Overlay below the text */  
+    background-color: rgba(2, 6, 35, 0.5); /* Dark blue overlay */  
+    z-index: 1; /* Placed below the content */  
 }  
 
+/* Container for the loading elements */  
 .loading-container {  
     text-align: center;  
-    color: white; /* Text color */  
-    background: #020623; /* Background color */  
-    padding: 30px; /* Padding around the container */  
-    border-radius: 10px; /* Rounded corners */  
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */  
-    z-index: 2; /* Ensure above overlay */  
-    position: relative; /* Positioning for z-index */  
+    color: white;   
+    background: #020623; /* Dark background for the container */  
+    padding: 30px;   
+    border-radius: 10px;   
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);   
+    z-index: 2; /* On top of the overlay */  
 }  
 
+/* Main heading styling */  
 h1 {  
-    font-size: 2rem; /* Main heading font size */  
-    margin: 0; /* Remove default margin */  
+    font-size: 2rem; /* Heading size */  
+    margin: 0;   
 }  
 
+/* Styling for loading text */  
 #loading-text {  
-    font-size: 1.2rem; /* Loading text font size */  
-    margin: 0.5rem 0; /* Margin between elements */  
-    width: 300px; /* Fixed width for loading text */  
-    white-space: nowrap; /* Prevent text from wrapping */  
-    overflow: hidden; /* Hide overflow text */  
-    text-overflow: ellipsis; /* Show ellipsis for overflow text */  
+    font-size: 1.5rem; /* Large text size for loading messages */  
+    margin: 0.5rem 0;   
+    width: auto; /* Dynamic width */  
+    white-space: normal; /* Allow text to wrap */  
+    overflow: visible; /* Ensure all text is visible */  
+    display: block; /* Treat as a block element */  
+    text-align: center; /* Center align the text */  
 }  
 
+/* Styling for the progress bar container */  
 .progress-bar-container {  
-    width: 100%; /* Full width */  
+    width: 100%; /* Full-width for the container */  
     height: 30px; /* Height of the progress bar */  
-    border-radius: 15px; /* Rounded corners for progress bar container */  
-    background-color: #555; /* Background color for the progress bar */  
-    margin-top: 20px; /* Space above the progress bar */  
-    position: relative; /* For positioning children */  
+    border-radius: 15px;   
+    background-color: #555; /* Grey background */  
+    margin-top: 20px; /* Space above */  
+    position: relative;   
 }  
 
+/* Individual progress bar styling */  
 .progress-bar {  
-    height: 100%; /* Full height of the container */  
-    background-color: #f9a825; /* Color for the filled part of the progress bar */  
-    border-radius: 15px; /* Match rounded corners */  
-    transition: width 1s ease; /* Smooth transition */  
+    height: 100%; /* Stretch to fill container */  
+    background-color: #f9a825; /* Yellow background for progress bar */  
+    border-radius: 15px;   
+    transition: width 1s ease; /* Smooth transition for width change */  
 }  
 
+/* Styling for percentage display */  
 .percentage {  
-    position: absolute; /* Positioning within the bar container */  
-    top: 50%; /* Center vertically */  
-    left: 50%; /* Center horizontally */  
-    transform: translate(-50%, -50%); /* Perfect centering */  
-    font-size: 1.5rem; /* Font size for the percentage */  
-    color: #4caf50; /* Color for the percentage text */  
-    font-weight: bold; /* Bold text */  
+    position: absolute;   
+    top: 50%;   
+    left: 50%;   
+    transform: translate(-50%, -50%); /* Center the percentage text */  
+    font-size: 1.5rem;   
+    color: #4caf50; /* Green color for the percentage */  
+    font-weight: bold;   
 }
