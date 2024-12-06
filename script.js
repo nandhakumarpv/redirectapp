@@ -26,17 +26,17 @@ const countdownInterval = setInterval(() => {
 
     if (countdownTime <= 0) {  
         clearInterval(countdownInterval);  
-        loadingText.textContent = "Your account has been successfully created! You can now sign in on the next page using the email address you provided during registration.";  
-
-        percentageDisplay.textContent = "100%"; // Final percentage  
-        progressBar.style.width = '100%'; // Ensure the bar is complete  
-
-        // Remove the progress bar container  
+        
+        // Remove the progress bar and percentage display  
         progressBarContainer.style.display = 'none';   
+        percentageDisplay.textContent = ""; // Clear percentage display  
 
-        // Redirect to the specified URL after displaying the final message  
+        // Clear previous loading text and display the final confirmation message  
+        loadingText.textContent = "Hurray! Your account has been successfully created! You can now sign in on the next page using the email address you provided during registration.";  
+
+        // Redirect to the specified URL after displaying the final message for 10 seconds  
         setTimeout(() => {  
             window.location.href = "https://stg.jira.evolent.com/servicedesk/customer/user/login?nokerberos&destination=portals";  
-        }, 5000); // Redirect after 5 seconds  
+        }, 10000); // Redirect after 10 seconds  
     }  
 }, 1000);
