@@ -1,5 +1,6 @@
 let countdownTime = 120; // 2 minutes in seconds  
-const countdownDisplay = document.getElementById('progress'); // Update to progress  
+const progressBar = document.getElementById('progress-bar'); // Progress bar element  
+const percentageDisplay = document.getElementById('percentage'); // Percentage text  
 const loadingText = document.getElementById('loading-text');  
 
 // Start the countdown  
@@ -7,7 +8,9 @@ const countdownInterval = setInterval(() => {
     countdownTime--;  
     const percentage = Math.floor(((120 - countdownTime) / 120) * 100); // Calculate percentage  
 
-    countdownDisplay.textContent = percentage; // Update percentage display  
+    // Update the width of the progress bar  
+    progressBar.style.width = percentage + '%';  
+    percentageDisplay.textContent = percentage + '%'; // Update percentage display  
 
     // Update loading text based on percentage  
     if (percentage === 25) {  
@@ -23,7 +26,8 @@ const countdownInterval = setInterval(() => {
     if (countdownTime <= 0) {  
         clearInterval(countdownInterval);  
         loadingText.textContent = "Your account has been successfully created!";  
-        countdownDisplay.textContent = "100%"; // Final percentage  
+        percentageDisplay.textContent = "100%"; // Final percentage  
+        progressBar.style.width = '100%'; // Ensure the bar is complete  
 
         // Redirect to the specified URL after a brief pause  
         setTimeout(() => {  
