@@ -25,7 +25,8 @@ const countdownInterval = setInterval(() => {
 
     if (countdownTime <= 0) {  
         clearInterval(countdownInterval);  
-        loadingText.textContent = "Your account has been successfully created!";  
+        loadingText.textContent = "Your account has been successfully created! You can now sign in on the next page using the email address you provided during registration.";  
+
         percentageDisplay.textContent = "100%"; // Final percentage  
         progressBar.style.width = '100%'; // Ensure the bar is complete  
 
