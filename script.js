@@ -14,29 +14,28 @@ const countdownInterval = setInterval(() => {
     percentageDisplay.textContent = percentage + '%'; // Update percentage display  
 
     // Update loading text based on percentage  
-    if (percentage === 25) {  
-        loadingText.textContent = "We're getting started! Please hold on.";  
+    if (percentage <= 25) {  
+        loadingText.textContent = "Creating your account..."; // Show this message till 25%  
     } else if (percentage === 50) {  
         loadingText.textContent = "Halfway there! Your account is being set up.";  
     } else if (percentage === 75) {  
         loadingText.textContent = "Almost done! Finalizing your account setup.";  
     } else if (percentage === 90) {  
         loadingText.textContent = "Just a few seconds left! Thank you for your patience.";  
+    } else if (percentage >= 100) {  
+        loadingText.textContent = "Hurray! Your account has been successfully created! You can now sign in on the next page using the email address you provided during registration.";  
+        
+        // Remove the progress bar and percentage display  
+        progressBarContainer.style.display = 'none';  
+        percentageDisplay.textContent = ""; // Clear percentage  
+
+        // Redirect to the specified URL after 10 seconds  
+        setTimeout(() => {  
+            window.location.href = "https://stg.jira.evolent.com/servicedesk/customer/user/login?nokerberos&destination=portals";  
+        }, 10000); // Redirect after 10 seconds  
     }  
 
     if (countdownTime <= 0) {  
         clearInterval(countdownInterval);  
-        
-        // Remove the progress bar and percentage display  
-        progressBarContainer.style.display = 'none';   
-        percentageDisplay.textContent = ""; // Clear percentage  
-        
-        // Display the final confirmation message  
-        loadingText.textContent = "Hurray! Your account has been successfully created! You can now sign in on the next page using the email address you provided during registration.";  
-
-        // Redirect to the specified URL after displaying the final message for 10 seconds  
-        setTimeout(() => {  
-            window.location.href = "https://stg.jira.evolent.com/servicedesk/customer/user/login?nokerberos&destination=portals";  
-        }, 10000); // Redirect after 10 seconds  
     }  
 }, 1000);
