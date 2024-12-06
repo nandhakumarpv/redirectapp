@@ -25,7 +25,7 @@ const countdownInterval = setInterval(() => {
     } else if (percentage === 90) {  
         loadingText.textContent = "Just a few seconds left! Thank you for your patience.";  
     } else if (percentage >= 100) {  
-        loadingText.textContent = "Hurray! Your account has been successfully created! You can now sign in on the next page using the email address you provided during registration.";  
+        loadingText.textContent = "Hurray! Your account has been successfully created!\nYou can now sign in on the next page using the email address you provided during registration.";  
         
         // Remove the progress bar and percentage display  
         progressBarContainer.style.display = 'none';  
