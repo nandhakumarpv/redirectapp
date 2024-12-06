@@ -2,6 +2,7 @@ let countdownTime = 120; // 2 minutes in seconds
 const progressBar = document.getElementById('progress-bar'); // Progress bar element  
 const percentageDisplay = document.getElementById('percentage'); // Percentage text  
 const loadingText = document.getElementById('loading-text');  
+const progressBarContainer = document.querySelector('.progress-bar-container'); // Progress bar container  
 
 // Start the countdown  
 const countdownInterval = setInterval(() => {  
@@ -19,7 +20,7 @@ const countdownInterval = setInterval(() => {
         loadingText.textContent = "Halfway there! Your account is being set up.";  
     } else if (percentage === 75) {  
         loadingText.textContent = "Almost done! Finalizing your account setup.";  
-    } else if (percentage === 80) {  
+    } else if (percentage === 90) {  
         loadingText.textContent = "Just a few seconds left! Thank you for your patience.";  
     }  
 
@@ -30,9 +31,12 @@ const countdownInterval = setInterval(() => {
         percentageDisplay.textContent = "100%"; // Final percentage  
         progressBar.style.width = '100%'; // Ensure the bar is complete  
 
-        // Redirect to the specified URL after a brief pause  
+        // Remove the progress bar container  
+        progressBarContainer.style.display = 'none';   
+
+        // Redirect to the specified URL after displaying the final message  
         setTimeout(() => {  
             window.location.href = "https://stg.jira.evolent.com/servicedesk/customer/user/login?nokerberos&destination=portals";  
-        }, 3000); // Redirect after 3 seconds  
+        }, 5000); // Redirect after 5 seconds  
     }  
 }, 1000);
