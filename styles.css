@@ -4,9 +4,9 @@ body, html {
     display: flex;  
     justify-content: center;  
     align-items: center;  
-    background-image: url('background.jpg'); /* Replace with your image file path or GitHub raw link */  
-    background-size: cover; /* Maintain aspect ratio while covering the area */  
-    background-position: center top; /* Focus on the top section */  
+    background-image: url('background.jpg'); /* Replace with your image path */  
+    background-size: cover; /* Maintain aspect ratio while covering */  
+    background-position: center top; /* Focus on top section */  
     font-family: 'Arial', sans-serif; /* Modern font style */  
 }  
 
@@ -16,7 +16,7 @@ body, html {
     left: 0;  
     height: 100%;  
     width: 100%;  
-    background-color: rgba(2, 6, 35, 0.5); /* Semi-transparent overlay */  
+    background-color: rgba(2, 6, 35, 0.5); /* Semi-transparent overlay for better legibility */  
     z-index: 1; /* Overlay below the text */  
 }  
 
@@ -39,20 +39,24 @@ h1 {
 #loading-text {  
     font-size: 1.2rem; /* Loading text font size */  
     margin: 0.5rem 0; /* Margin between elements */  
+    width: 300px; /* Fixed width for loading text */  
+    white-space: nowrap; /* Prevent text from wrapping */  
+    overflow: hidden; /* Hide overflow text */  
+    text-overflow: ellipsis; /* Show ellipsis for overflow text */  
 }  
 
 .progress-bar-container {  
     width: 100%; /* Full width */  
     height: 30px; /* Height of the progress bar */  
-    border-radius: 15px; /* Rounded corners */  
-    background-color: #555; /* Background color for the bar */  
+    border-radius: 15px; /* Rounded corners for progress bar container */  
+    background-color: #555; /* Background color for the progress bar */  
     margin-top: 20px; /* Space above the progress bar */  
     position: relative; /* For positioning children */  
 }  
 
 .progress-bar {  
     height: 100%; /* Full height of the container */  
-    background-color: #f9a825; /* Color for the progress */  
+    background-color: #f9a825; /* Color for the filled part of the progress bar */  
     border-radius: 15px; /* Match rounded corners */  
     transition: width 1s ease; /* Smooth transition */  
 }  
