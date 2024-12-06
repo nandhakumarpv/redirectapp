@@ -1,7 +1,7 @@
 let countdownTime = 120; // 2 minutes in seconds  
 const progressBar = document.getElementById('progress-bar'); // Progress bar element  
 const percentageDisplay = document.getElementById('percentage'); // Percentage text  
-const loadingText = document.getElementById('loading-text');  
+const loadingText = document.getElementById('loading-text'); // Div for loading messages  
 const progressBarContainer = document.querySelector('.progress-bar-container'); // Progress bar container  
 
 // Start the countdown  
@@ -29,9 +29,9 @@ const countdownInterval = setInterval(() => {
         
         // Remove the progress bar and percentage display  
         progressBarContainer.style.display = 'none';   
-        percentageDisplay.textContent = ""; // Clear percentage display  
-
-        // Clear previous loading text and display the final confirmation message  
+        percentageDisplay.textContent = ""; // Clear percentage  
+        
+        // Display the final confirmation message  
         loadingText.textContent = "Hurray! Your account has been successfully created! You can now sign in on the next page using the email address you provided during registration.";  
 
         // Redirect to the specified URL after displaying the final message for 10 seconds  
