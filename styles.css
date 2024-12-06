@@ -6,8 +6,8 @@ body, html {
     align-items: center;  
     background-image: url('background.jpg'); /* Replace with your image file path or GitHub raw link */  
     background-size: cover; /* Maintain aspect ratio while covering the area */  
-    background-position: center top; /* Adjust positioning to focus on the top section */  
-    font-family: 'Arial', sans-serif; /* Updated font for a modern feel */  
+    background-position: center top; /* Focus on the top section */  
+    font-family: 'Arial', sans-serif; /* Modern font style */  
 }  
 
 .overlay {  
@@ -16,37 +16,53 @@ body, html {
     left: 0;  
     height: 100%;  
     width: 100%;  
-    background-color: rgba(2, 6, 35, 0.5); /* Semi-transparent overlay for better legibility */  
-    z-index: 1; /* Layer the overlay below the text */  
+    background-color: rgba(2, 6, 35, 0.5); /* Semi-transparent overlay */  
+    z-index: 1; /* Overlay below the text */  
 }  
 
 .loading-container {  
     text-align: center;  
-    color: white; /* Set text color to white for better contrast */  
-    background: #020623; /* Background color for loading container */  
-    padding: 30px; /* Add padding for a nicer look */  
-    border-radius: 10px; /* Slightly rounded corners */  
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */  
-    z-index: 2; /* Ensure loading container is above the overlay */  
-    position: relative; /* Positioning relative for z-index */  
+    color: white; /* Text color */  
+    background: #020623; /* Background color */  
+    padding: 30px; /* Padding around the container */  
+    border-radius: 10px; /* Rounded corners */  
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */  
+    z-index: 2; /* Ensure above overlay */  
+    position: relative; /* Positioning for z-index */  
 }  
 
 h1 {  
-    font-size: 2rem; /* Increase font size for the main heading */  
+    font-size: 2rem; /* Main heading font size */  
     margin: 0; /* Remove default margin */  
 }  
 
 #loading-text {  
-    font-size: 1.2rem; /* Increase font size for loading text */  
-    margin: 0.5rem 0; /* Add some margin */  
-    transition: font-size 0.5s ease; /* Smooth transition for font size changes */  
+    font-size: 1.2rem; /* Loading text font size */  
+    margin: 0.5rem 0; /* Margin between elements */  
 }  
 
-#percentage {  
-    font-size: 1.5rem; /* Increase font size for percentage display */  
-    margin-top: 1rem; /* Add space above the percentage text */  
+.progress-bar-container {  
+    width: 100%; /* Full width */  
+    height: 30px; /* Height of the progress bar */  
+    border-radius: 15px; /* Rounded corners */  
+    background-color: #555; /* Background color for the bar */  
+    margin-top: 20px; /* Space above the progress bar */  
+    position: relative; /* For positioning children */  
 }  
 
-.loader {  
-    display: none; /* Hide the loader since we are using countdown */  
+.progress-bar {  
+    height: 100%; /* Full height of the container */  
+    background-color: #f9a825; /* Color for the progress */  
+    border-radius: 15px; /* Match rounded corners */  
+    transition: width 1s ease; /* Smooth transition */  
+}  
+
+.percentage {  
+    position: absolute; /* Positioning within the bar container */  
+    top: 50%; /* Center vertically */  
+    left: 50%; /* Center horizontally */  
+    transform: translate(-50%, -50%); /* Perfect centering */  
+    font-size: 1.5rem; /* Font size for the percentage */  
+    color: #4caf50; /* Color for the percentage text */  
+    font-weight: bold; /* Bold text */  
 }
