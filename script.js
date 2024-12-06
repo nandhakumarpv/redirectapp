@@ -16,7 +16,7 @@ const countdownInterval = setInterval(() => {
     // Update loading text based on percentage  
     if (percentage <= 25) {  
         loadingText.textContent = "Creating your account..."; // Show this message till 25%  
-    } else if (percentage === 25) {  
+    } else if (percentage > 25 && percentage < 50) {  
         loadingText.textContent = "We're working on creating your account! Hang tight.";  
     } else if (percentage === 50) {  
         loadingText.textContent = "Halfway there! Your account is being set up.";  
