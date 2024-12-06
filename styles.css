@@ -26,7 +26,7 @@ body, html {
 .loading-container {  
     text-align: center;  
     color: white;   
-    background: #E5D2E9; /* Changed to light purple background for the container */  
+    background: #020623; /* Dark background for the container */  
     padding: 30px;   
     border-radius: 10px;   
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);   
@@ -55,7 +55,7 @@ h1 {
     width: 100%; /* Full-width for the container */  
     height: 30px; /* Height of the progress bar */  
     border-radius: 15px;   
-    background-color: #555; /* Dark grey background for the container */  
+    background-color: #E5D2E9; /* Light purple background for the container */  
     margin-top: 20px; /* Space above */  
     position: relative;   
 }  
