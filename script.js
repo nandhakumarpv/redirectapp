@@ -19,7 +19,7 @@ const countdownInterval = setInterval(() => {
         loadingText.textContent = "Halfway there! Your account is being set up.";  
     } else if (percentage === 75) {  
         loadingText.textContent = "Almost done! Finalizing your account setup.";  
-    } else if (percentage === 90) {  
+    } else if (percentage === 80) {  
         loadingText.textContent = "Just a few seconds left! Thank you for your patience.";  
     }  
 
