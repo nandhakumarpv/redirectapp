@@ -1,4 +1,4 @@
-let countdownTime = 120; // 2 minutes in seconds  
+let countdownTime = 90; // 1 minute 30 seconds in seconds  
 const progressBar = document.getElementById('progress-bar'); // Progress bar element  
 const percentageDisplay = document.getElementById('percentage'); // Percentage text  
 const loadingText = document.getElementById('loading-text'); // Div for loading messages  
@@ -7,7 +7,7 @@ const progressBarContainer = document.querySelector('.progress-bar-container'); 
 // Start the countdown  
 const countdownInterval = setInterval(() => {  
     countdownTime--;  
-    const percentage = Math.floor(((120 - countdownTime) / 120) * 100); // Calculate percentage  
+    const percentage = Math.floor(((90 - countdownTime) / 90) * 100); // Calculate percentage  
 
     // Update the width of the progress bar  
     progressBar.style.width = percentage + '%';  
