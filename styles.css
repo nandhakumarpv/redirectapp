@@ -48,7 +48,6 @@ h1 {
     overflow: visible; /* Ensure all text is visible */
     display: block; /* Treat as a block element */
     text-align: center; /* Center align the text */
-    height: 2rem; /* Fixed height to ensure consistent size */
 }
 
 /* Styling for the progress bar container */
