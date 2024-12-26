@@ -3,12 +3,12 @@ body, html {
     height: 100%;  
     margin: 0;  
     display: flex; /* Center content vertically and horizontally */  
-    justify-content: center;  
+    justify-content: center;   
     align-items: center;  
     background-image: url('background.jpg'); /* Replace with your background image path */  
-    background-size: cover;  
-    background-position: center top;  
-    font-family: 'Arial', sans-serif;  
+    background-size: cover;   
+    background-position: center top;   
+    font-family: 'Arial', sans-serif;   
 }  
 
 /* Overlay for a semi-transparent background */  
@@ -25,14 +25,14 @@ body, html {
 /* Container for the loading elements */  
 .loading-container {  
     text-align: center;  
-    color: white;  
+    color: white;   
     background: #020623; /* Dark background for the container */  
-    padding: 30px;  
-    border-radius: 10px;  
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);  
+    padding: 30px;   
+    border-radius: 10px;   
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);   
     z-index: 2; /* On top of the overlay */  
     width: 400px; /* Set a fixed width */  
-    height: auto; /* Allow height to adjust based on content */  
+    height: 200px; /* Set a fixed height */  
     display: flex; /* Use flexbox for centering content */  
     flex-direction: column;  
     justify-content: center;  
@@ -42,7 +42,7 @@ body, html {
 /* Styling for loading text */  
 #loading-text {  
     font-size: 1.5rem; /* Large text size for loading messages */  
-    margin: 0.5rem 0;  
+    margin: 0.5rem 0;   
     width: 100%; /* Full width */  
     white-space: normal; /* Allow text to wrap */  
     overflow: visible; /* Ensure all text is visible */  
@@ -55,28 +55,27 @@ body, html {
 .progress-bar-container {  
     width: 100%; /* Full-width for the container */  
     height: 30px; /* Height of the progress bar */  
-    border-radius: 15px;  
+    border-radius: 15px;   
     background-color: #E5D2E9; /* Light purple background for the container */  
     margin-top: 20px; /* Space above */  
-    position: relative;  
+    position: relative;   
 }  
 
 /* Individual progress bar styling */  
 .progress-bar {  
     height: 100%; /* Stretch to fill container */  
     background-color: #7C1C93; /* Set to your specified purple color */  
-    border-radius: 15px;  
+    border-radius: 15px;   
     transition: width 1s ease; /* Smooth transition for width change */  
-    position: relative; /* Relative positioning for percentage display */  
 }  
 
-/* Styling for percentage display inside progress bar */  
+/* Styling for percentage display */  
 .percentage {  
-    position: absolute;  
-    top: 50%;  
-    left: 50%;  
+    position: absolute;   
+    top: 50%;   
+    left: 50%;   
     transform: translate(-50%, -50%); /* Center the percentage text */  
-    font-size: 1rem; /* Adjust font size as needed */  
+    font-size: 1.5rem;   
     color: #ffffff; /* Set to white for better visibility */  
-    font-weight: bold;  
+    font-weight: bold;   
 }
