@@ -1,8 +1,6 @@
 let countdownTime = 90; // 1 minute 30 seconds in seconds  
 const progressBar = document.getElementById('progress-bar'); // Progress bar element  
-const percentageDisplay = document.getElementById('percentage'); // Percentage text  
 const loadingText = document.getElementById('loading-text'); // Div for loading messages  
-const progressBarContainer = document.querySelector('.progress-bar-container'); // Progress bar container  
 
 // Start the countdown  
 const countdownInterval = setInterval(() => {  
@@ -11,7 +9,7 @@ const countdownInterval = setInterval(() => {
 
     // Update the width of the progress bar  
     progressBar.style.width = percentage + '%';  
-    percentageDisplay.textContent = percentage + '%'; // Update percentage display  
+    progressBar.querySelector('#percentage').textContent = percentage + '%'; // Update percentage display  
 
     // Update loading text based on percentage  
     if (percentage <= 25) {  
@@ -29,7 +27,6 @@ const countdownInterval = setInterval(() => {
 
         // Remove the progress bar and percentage display  
         progressBarContainer.style.display = 'none';  
-        percentageDisplay.textContent = ""; // Clear percentage  
 
         // Redirect to the specified URL after 10 seconds  
         setTimeout(() => {  
