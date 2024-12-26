@@ -15,7 +15,7 @@ const countdownInterval = setInterval(() => {
 
     // Update loading text based on percentage  
     if (percentage <= 25) {  
-        loadingText.innerHTML = "Creating your account..."; // Show this message till 25%  
+        loadingText.innerHTML = "Creating your account...";  
     } else if (percentage > 25 && percentage < 50) {  
         loadingText.innerHTML = "We're working on creating your account!<br>Hang tight.";  
     } else if (percentage === 50) {  
@@ -26,7 +26,7 @@ const countdownInterval = setInterval(() => {
         loadingText.innerHTML = "Just a few seconds left!<br>Thank you for your patience.";  
     } else if (percentage >= 100) {  
         loadingText.innerHTML = "Hurray! Your account has been successfully created!<br>You can now sign in on the next page using the email address you provided during registration.";  
-        
+
         // Remove the progress bar and percentage display  
         progressBarContainer.style.display = 'none';  
         percentageDisplay.textContent = ""; // Clear percentage  
