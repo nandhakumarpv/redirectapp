@@ -31,21 +31,22 @@ body, html {
     border-radius: 10px;   
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);   
     z-index: 2; /* On top of the overlay */  
-}  
-
-/* Main heading styling */  
-h1 {  
-    font-size: 2rem; /* Heading size */  
-    margin: 0;   
+    width: 400px; /* Set a fixed width */  
+    height: 200px; /* Set a fixed height */  
+    display: flex; /* Use flexbox for centering content */  
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;  
 }  
 
 /* Styling for loading text */  
 #loading-text {  
     font-size: 1.5rem; /* Large text size for loading messages */  
     margin: 0.5rem 0;   
-    width: auto; /* Dynamic width */  
+    width: 100%; /* Full width */  
     white-space: normal; /* Allow text to wrap */  
-    overflow: visible; /* Ensure all text is visible */  
+    overflow: hidden; /* Hide overflow */  
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */  
     display: block; /* Treat as a block element */  
     text-align: center; /* Center align the text */  
 }  
