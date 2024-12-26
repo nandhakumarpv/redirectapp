@@ -1,80 +1,80 @@
-/* Reset defaults for body and html */
-body, html {
-    height: 100%;
-    margin: 0;
-    display: flex; /* Center content vertically and horizontally */
-    justify-content: center;
-    align-items: center;
-    background-image: url('background.jpg'); /* Replace with your background image path */
-    background-size: cover;
-    background-position: center top;
-    font-family: 'Arial', sans-serif;
-}
+/* Reset defaults for body and html */  
+body, html {  
+    height: 100%;  
+    margin: 0;  
+    display: flex; /* Center content vertically and horizontally */  
+    justify-content: center;   
+    align-items: center;  
+    background-image: url('background.jpg'); /* Replace with your background image path */  
+    background-size: cover;   
+    background-position: center top;   
+    font-family: 'Arial', sans-serif;   
+}  
 
-/* Overlay for a semi-transparent background */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(2, 6, 35, 0.5); /* Dark blue overlay */
-    z-index: 1; /* Placed below the content */
-}
+/* Overlay for a semi-transparent background */  
+.overlay {  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    height: 100%;  
+    width: 100%;  
+    background-color: rgba(2, 6, 35, 0.5); /* Dark blue overlay */  
+    z-index: 1; /* Placed below the content */  
+}  
 
-/* Container for the loading elements */
-.loading-container {
-    text-align: center;
-    color: white;
-    background: #020623; /* Dark background for the container */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    z-index: 2; /* On top of the overlay */
-}
+/* Container for the loading elements */  
+.loading-container {  
+    text-align: center;  
+    color: white;   
+    background: #020623; /* Dark background for the container */  
+    padding: 30px;   
+    border-radius: 10px;   
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);   
+    z-index: 2; /* On top of the overlay */  
+}  
 
-/* Main heading styling */
-h1 {
-    font-size: 2rem; /* Heading size */
-    margin: 0;
-}
+/* Main heading styling */  
+h1 {  
+    font-size: 2rem; /* Heading size */  
+    margin: 0;   
+}  
 
-/* Styling for loading text */
-#loading-text {
-    font-size: 1.5rem; /* Large text size for loading messages */
-    margin: 0.5rem 0;
-    width: auto; /* Dynamic width */
-    white-space: normal; /* Allow text to wrap */
-    overflow: visible; /* Ensure all text is visible */
-    display: block; /* Treat as a block element */
-    text-align: center; /* Center align the text */
-}
+/* Styling for loading text */  
+#loading-text {  
+    font-size: 1.5rem; /* Large text size for loading messages */  
+    margin: 0.5rem 0;   
+    width: auto; /* Dynamic width */  
+    white-space: normal; /* Allow text to wrap */  
+    overflow: visible; /* Ensure all text is visible */  
+    display: block; /* Treat as a block element */  
+    text-align: center; /* Center align the text */  
+}  
 
-/* Styling for the progress bar container */
-.progress-bar-container {
-    width: 100%; /* Full-width for the container */
-    height: 30px; /* Height of the progress bar */
-    border-radius: 15px;
-    background-color: #E5D2E9; /* Light purple background for the container */
-    margin-top: 20px; /* Space above */
-    position: relative;
-}
+/* Styling for the progress bar container */  
+.progress-bar-container {  
+    width: 100%; /* Full-width for the container */  
+    height: 30px; /* Height of the progress bar */  
+    border-radius: 15px;   
+    background-color: #E5D2E9; /* Light purple background for the container */  
+    margin-top: 20px; /* Space above */  
+    position: relative;   
+}  
 
-/* Individual progress bar styling */
-.progress-bar {
-    height: 100%; /* Stretch to fill container */
-    background-color: #7C1C93; /* Set to your specified purple color */
-    border-radius: 15px;
-    transition: width 1s ease; /* Smooth transition for width change */
-}
+/* Individual progress bar styling */  
+.progress-bar {  
+    height: 100%; /* Stretch to fill container */  
+    background-color: #7C1C93; /* Set to your specified purple color */  
+    border-radius: 15px;   
+    transition: width 1s ease; /* Smooth transition for width change */  
+}  
 
-/* Styling for percentage display */
-.percentage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the percentage text */
-    font-size: 1.5rem;
-    color: #ffffff; /* Set to white for better visibility */
-    font-weight: bold;
+/* Styling for percentage display */  
+.percentage {  
+    position: absolute;   
+    top: 50%;   
+    left: 50%;   
+    transform: translate(-50%, -50%); /* Center the percentage text */  
+    font-size: 1.5rem;   
+    color: #ffffff; /* Set to white for better visibility */  
+    font-weight: bold;   
 }
