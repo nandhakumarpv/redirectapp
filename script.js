@@ -1,6 +1,8 @@
 let countdownTime = 90; // 1 minute 30 seconds in seconds  
 const progressBar = document.getElementById('progress-bar'); // Progress bar element  
+const percentageDisplay = document.getElementById('percentage'); // Percentage text  
 const loadingText = document.getElementById('loading-text'); // Div for loading messages  
+const progressBarContainer = document.querySelector('.progress-bar-container'); // Progress bar container  
 
 // Start the countdown  
 const countdownInterval = setInterval(() => {  
@@ -9,13 +11,13 @@ const countdownInterval = setInterval(() => {
 
     // Update the width of the progress bar  
     progressBar.style.width = percentage + '%';  
-    progressBar.querySelector('#percentage').textContent = percentage + '%'; // Update percentage display  
+    percentageDisplay.textContent = percentage + '%'; // Update percentage display  
 
     // Update loading text based on percentage  
     if (percentage <= 25) {  
-        loadingText.innerHTML = "Creating your account...";  
+        loadingText.innerHTML = "Creating your account..."; // Show this message till 25%  
     } else if (percentage > 25 && percentage < 50) {  
-        loadingText.innerHTML = "We're working on creating your account!<br>Hang tight.";  
+        loadingText.innerHTML = "Hang tight!<br>We're working on creating your account.";  
     } else if (percentage === 50) {  
         loadingText.innerHTML = "Halfway there!<br>Your account is being set up.";  
     } else if (percentage === 75) {  
@@ -23,10 +25,11 @@ const countdownInterval = setInterval(() => {
     } else if (percentage === 90) {  
         loadingText.innerHTML = "Just a few seconds left!<br>Thank you for your patience.";  
     } else if (percentage >= 100) {  
-        loadingText.innerHTML = "Hurray! Your account has been successfully created!<br>You can now sign in on the next page using the email address you provided during registration.";  
-
+        loadingText.innerHTML = "Hurray!<br>Your account has been successfully created!<br>You can now sign in on the next page using the email address you provided during registration.";  
+        
         // Remove the progress bar and percentage display  
         progressBarContainer.style.display = 'none';  
+        percentageDisplay.textContent = ""; // Clear percentage  
 
         // Redirect to the specified URL after 10 seconds  
         setTimeout(() => {  
