@@ -32,7 +32,7 @@ body, html {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);   
     z-index: 2; /* On top of the overlay */  
     width: 400px; /* Set a fixed width */  
-    height: 200px; /* Set a fixed height */  
+    height: 250px; /* Increased height to accommodate warning text */  
     display: flex; /* Use flexbox for centering content */  
     flex-direction: column;  
     justify-content: center;  
@@ -63,19 +63,4 @@ body, html {
 
 /* Individual progress bar styling */  
 .progress-bar {  
-    height: 100%; /* Stretch to fill container */  
-    background-color: #7C1C93; /* Set to your specified purple color */  
-    border-radius: 15px;   
-    transition: width 1s ease; /* Smooth transition for width change */  
-}  
-
-/* Styling for percentage display */  
-.percentage {  
-    position: absolute;   
-    top: 50%;   
-    left: 50%;   
-    transform: translate(-50%, -50%); /* Center the percentage text */  
-    font-size: 1.5rem;   
-    color: #ffffff; /* Set to white for better visibility */  
-    font-weight: bold;   
-}
+    height: 100
